@@ -5,10 +5,10 @@
         <VRChatFolder>D:\Steam Library\steamapps\common\VRChat</VRChatFolder>
         <MelonManaged>$(VRChatFolder)\MelonLoader\Managed</MelonManaged>
         <MelonLoader>$(VRChatFolder)\MelonLoader</MelonLoader>
-        <GithubRepoUrl>https://github.com/gompoc/VRChatMods</GithubRepoUrl>
+        <GithubRepoUrl>https://github.com/xAstroBoy/Gompoc-VRChatMods-Unchained</GithubRepoUrl>
         <CIVAR>$(CI)</CIVAR>
     </PropertyGroup>
-    <ItemGroup Condition="'$(VrcReferences)' == 'true'">
+  <ItemGroup Condition="'$(VrcReferences)' == 'true'">
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <SpecificVersion>false</SpecificVersion>
             <Private>false</Private>
@@ -200,7 +200,10 @@
         <OutputPath>$(MsBuildThisFileDirectory)\Output\$(Configuration)\</OutputPath>
     </PropertyGroup>
     <ItemGroup Condition="'$(VrcReferences)' == 'true'">
+        <ProjectReference Include="$(MsBuildThisFileDirectory)/Tools/IntegrityCheckGenerator/IntegrityCheckGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="$(MsBuildThisFileDirectory)Tools\IntegrityCheckWeaver\IntegrityCheckWeaver.csproj" PrivateAssets="all"/>
     </ItemGroup>
+    <Target Name="CopyModToModsFolder" AfterTargets="GenerateModJson" Condition="'$(CopyToMods)' == 'true' And '$(CIVAR)'==''">
         <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll $(VRChatFolder)\Mods" />
     </Target>
 </Project>
