@@ -6,7 +6,7 @@
         <LangVersion>9</LangVersion>
         <CopyToMods>true</CopyToMods>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <GenerateJson>true</GenerateJson>
+        <GenerateJson>false</GenerateJson>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

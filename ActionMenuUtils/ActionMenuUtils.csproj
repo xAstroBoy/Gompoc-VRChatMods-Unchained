@@ -6,7 +6,7 @@
         <Version>2.0.4.0</Version>
         <LangVersion>9</LangVersion>
         <CopyToMods>true</CopyToMods>
-        <GenerateJson>true</GenerateJson>
+        <GenerateJson>false</GenerateJson>
     </PropertyGroup>
     
     <ItemGroup>

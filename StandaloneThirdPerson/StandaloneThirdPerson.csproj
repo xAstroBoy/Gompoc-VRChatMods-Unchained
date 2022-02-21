@@ -4,7 +4,7 @@
         <VrcReferences>true</VrcReferences>
         <Version>1.3.3.0</Version>
         <LangVersion>9</LangVersion>
-        <CopyToMods>true</CopyToMods>
-        <GenerateJson>true</GenerateJson>
+        <CopyToMods>false</CopyToMods>
+        <GenerateJson>false</GenerateJson>
     </PropertyGroup>
 </Project>

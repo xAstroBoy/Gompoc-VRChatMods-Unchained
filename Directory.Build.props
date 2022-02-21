@@ -199,10 +199,11 @@
     <PropertyGroup>
         <OutputPath>$(MsBuildThisFileDirectory)\Output\$(Configuration)\</OutputPath>
     </PropertyGroup>
-    <ItemGroup Condition="'$(VrcReferences)' == 'true'">
+  <!--How about You go Fuck yourself Gompoc and Knah <3 ?-->
+    <!--<ItemGroup Condition="'$(VrcReferences)' == 'true'">
         <ProjectReference Include="$(MsBuildThisFileDirectory)/Tools/IntegrityCheckGenerator/IntegrityCheckGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="$(MsBuildThisFileDirectory)Tools\IntegrityCheckWeaver\IntegrityCheckWeaver.csproj" PrivateAssets="all"/>
-    </ItemGroup>
+    </ItemGroup>-->
     <Target Name="CopyModToModsFolder" AfterTargets="GenerateModJson" Condition="'$(CopyToMods)' == 'true' And '$(CIVAR)'==''">
         <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll $(VRChatFolder)\Mods" />
     </Target>
