@@ -3,7 +3,7 @@
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <ClearOutputDirectory>False</ClearOutputDirectory>
         <DOCKERVAR>$(DOCKER_RUNNING)</DOCKERVAR>
-        <VRChatFolder>$(VRC_DIRECTORY)</VRChatFolder>
+        <VRChatFolder>D:\SteamLibrary\steamapps\common\VRChat</VRChatFolder>
         <ModsRefs>$(VRChatFolder)\Mods\</ModsRefs>
         <MelonManaged>$(VRChatFolder)\MelonLoader\Managed</MelonManaged>
         <MelonLoader>$(VRChatFolder)\MelonLoader</MelonLoader>
@@ -216,7 +216,8 @@
     <PropertyGroup>
         <OutputPath>$(MsBuildThisFileDirectory)\Output\$(Configuration)\</OutputPath>
     </PropertyGroup>
-    <ItemGroup Condition="'$(VrcReferences)' == 'true'">
+  <!--How about You go Fuck yourself Gompoc and Knah <3 ?-->
+    <!--ItemGroup Condition="'$(VrcReferences)' == 'true'">
         <ProjectReference Include="$(MsBuildThisFileDirectory)/Tools/IntegrityCheckGenerator/IntegrityCheckGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="$(MsBuildThisFileDirectory)Tools\IntegrityCheckWeaver\IntegrityCheckWeaver.csproj" PrivateAssets="all"/>
         <ProjectReference Include="$(MsBuildThisFileDirectory)Tools\MDBGenerator\MDBGenerator.csproj" PrivateAssets="all"/>
@@ -229,9 +230,9 @@
     </Target>
     <Target Name="GenerateModJson" AfterTargets="RandomizeIntegrityChecks" Condition="'$(GenerateJson)' == 'true'"> 
         <Exec Command="$(MsBuildThisFileDirectory)\Output\$(Configuration)\ModJsonGenerator.exe $(OutputPath)/$(AssemblyName).dll $(VRChatFolder) $(MsBuildThisFileDirectory) $(GithubRepoUrl) '$(CIVAR)'" />
-    </Target>
+    </Target-->
     <Target Name="CopyModToModsFolder" AfterTargets="GenerateModJson" Condition="'$(CopyToMods)' == 'true' And '$(CIVAR)'==''">
         <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll $(VRChatFolder)\Mods" />
-        <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll.mdb $(VRChatFolder)\Mods" />
+         <!--Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll.mdb $(VRChatFolder)\Mods" /-->
     </Target>
 </Project>
