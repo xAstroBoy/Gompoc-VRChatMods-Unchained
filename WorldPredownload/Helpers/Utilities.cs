@@ -32,7 +32,7 @@ namespace WorldPredownload.Helpers
             }
             catch (Exception e)
             {
-                MelonLogger.LogError($"Beep boop, Something went wrong trying to used advanced invites {e}");
+                MelonLogger.Error($"Beep boop, Something went wrong trying to used advanced invites {e}");
             }
 #else
             Delegates.GetAdvancedInvitesInviteDelegate(notification);

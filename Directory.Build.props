@@ -18,9 +18,7 @@
         <ModRefs>$(MsBuildThisFileDirectory)Libs\</ModRefs>
     </PropertyGroup>
     
-    <ItemGroup Condition="'$(VrcReferences)' == 'true'">
-        <EmbeddedResource Include="$(MsBuildThisFileDirectory)Common\_dummy_.dll"/>
-        <EmbeddedResource Include="$(MsBuildThisFileDirectory)Common\_dummy2_.dll"/>
+    <ItemGroup>
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <SpecificVersion>false</SpecificVersion>
             <Private>false</Private>

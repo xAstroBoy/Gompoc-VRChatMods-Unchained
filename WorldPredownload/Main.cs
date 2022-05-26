@@ -1,4 +1,5 @@
-﻿using MelonLoader;
+﻿using Harmony;
+using MelonLoader;
 using UIExpansionKit.API;
 using WorldPredownload.UI;
 
@@ -9,13 +10,10 @@ namespace WorldPredownload
 {
     internal partial class WorldPredownload : MelonMod
     {
-        private static MelonMod instance;
-        
-        public new static HarmonyLib.Harmony HarmonyInstance => instance.HarmonyInstance;
+        public new static HarmonyLib.Harmony HarmonyInstance => new HarmonyLib.Harmony("Gompoc");
 
         public override void OnApplicationStart()
         {
-            instance = this;
             ModSettings.RegisterSettings();
             ModSettings.LoadSettings();
             SocialMenuSetup.Patch();
@@ -43,7 +41,5 @@ namespace WorldPredownload
         {
             ModSettings.LoadSettings();
         }
-        
-        private static readonly string ID = "gompo";
     }
 }
