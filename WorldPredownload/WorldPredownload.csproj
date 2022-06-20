@@ -1,20 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>net48</TargetFramework>
         <VrcReferences>true</VrcReferences>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>annotations</Nullable>
         <CopyToMods>true</CopyToMods>
-        <GenerateJson>true</GenerateJson>
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
-
-    <ItemGroup>
+  <ItemGroup>
         <EmbeddedResource Include="gompowpd" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\Tools\ModJsonGenerator\ModJsonGenerator.csproj" />
     </ItemGroup>
 </Project>

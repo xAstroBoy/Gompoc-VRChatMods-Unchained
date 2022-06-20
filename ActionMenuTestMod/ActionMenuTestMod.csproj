@@ -7,7 +7,7 @@
         <LangVersion>9</LangVersion>
         <CopyToMods>false</CopyToMods>
     </PropertyGroup>
-
+  
     <ItemGroup>
         <ProjectReference Include="..\ActionMenuApi\ActionMenuApi.csproj" />
     </ItemGroup>

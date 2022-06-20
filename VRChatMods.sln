@@ -23,18 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionMenuUtils", "ActionMe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StandaloneThirdPerson", "StandaloneThirdPerson\StandaloneThirdPerson.csproj", "{A5F07D37-CAB2-43C7-98AF-F8184CC71DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateChecker", "UpdateChecker\UpdateChecker.csproj", "{2D0C38BE-2E7A-4E10-A066-9397D319EC4E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionMenuTestMod", "ActionMenuTestMod\ActionMenuTestMod.csproj", "{3E808C0A-0BF6-4DC6-808C-3BF377CC1E8E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModJsons", "ModJsons", "{95E54976-2D6F-45C8-97AB-02795D86757A}"
-	ProjectSection(SolutionItems) = preProject
-		ModJsons\ActionMenuApi.json = ModJsons\ActionMenuApi.json
-		ModJsons\ActionMenuUtils.json = ModJsons\ActionMenuUtils.json
-		ModJsons\StandaloneThirdPerson.json = ModJsons\StandaloneThirdPerson.json
-		ModJsons\UpdateChecker.json = ModJsons\UpdateChecker.json
-		ModJsons\WorldPredownload.json = ModJsons\WorldPredownload.json
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mods", "Mods", "{0AD02E34-80CC-4F88-9854-EB8DCA598060}"
 EndProject
@@ -60,10 +49,6 @@ Global
 		{A5F07D37-CAB2-43C7-98AF-F8184CC71DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F07D37-CAB2-43C7-98AF-F8184CC71DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F07D37-CAB2-43C7-98AF-F8184CC71DA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D0C38BE-2E7A-4E10-A066-9397D319EC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D0C38BE-2E7A-4E10-A066-9397D319EC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D0C38BE-2E7A-4E10-A066-9397D319EC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D0C38BE-2E7A-4E10-A066-9397D319EC4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E808C0A-0BF6-4DC6-808C-3BF377CC1E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E808C0A-0BF6-4DC6-808C-3BF377CC1E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E808C0A-0BF6-4DC6-808C-3BF377CC1E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,7 +62,6 @@ Global
 		{24F66D86-8B5C-4E4E-BCC2-06662E66C0EC} = {0AD02E34-80CC-4F88-9854-EB8DCA598060}
 		{7477F0C4-44AC-4049-A81E-E6A66F28B73C} = {0AD02E34-80CC-4F88-9854-EB8DCA598060}
 		{A5F07D37-CAB2-43C7-98AF-F8184CC71DA1} = {0AD02E34-80CC-4F88-9854-EB8DCA598060}
-		{2D0C38BE-2E7A-4E10-A066-9397D319EC4E} = {0AD02E34-80CC-4F88-9854-EB8DCA598060}
 		{3E808C0A-0BF6-4DC6-808C-3BF377CC1E8E} = {0AD02E34-80CC-4F88-9854-EB8DCA598060}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

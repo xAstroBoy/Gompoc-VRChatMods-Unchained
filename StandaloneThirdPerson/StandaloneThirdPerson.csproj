@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>net48</TargetFramework>
         <VrcReferences>true</VrcReferences>
         <CopyToMods>true</CopyToMods>
-        <GenerateJson>true</GenerateJson>
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Tools\ModJsonGenerator\ModJsonGenerator.csproj" />
-    </ItemGroup>
 </Project>

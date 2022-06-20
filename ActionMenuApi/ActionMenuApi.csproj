@@ -1,19 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>net48</TargetFramework>
         <VrcReferences>true</VrcReferences>
         <CopyToMods>true</CopyToMods>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <GenerateJson>true</GenerateJson>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
       <EmbeddedResource Include="actionmenuapi.icons" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Tools\ModJsonGenerator\ModJsonGenerator.csproj" />
     </ItemGroup>
 </Project>
