@@ -1,20 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
         <VrcReferences>true</VrcReferences>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <Nullable>annotations</Nullable>
-        <CopyToMods>true</CopyToMods>
         <GenerateJson>true</GenerateJson>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
-
     <ItemGroup>
-        <EmbeddedResource Include="gompowpd" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
-
     <ItemGroup>
         <ProjectReference Include="..\Tools\ModJsonGenerator\ModJsonGenerator.csproj" />
     </ItemGroup>
+    <Target Name="PostBuildCopy" AfterTargets="Build" Condition="'$(CIVAR)'==''">
+        <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll $(VRChatFolder)\Mods" />
+        <Exec Command="xcopy /c /f /y $(OutputPath)\$(AssemblyName).dll.mdb $(VRChatFolder)\Mods" />
+    </Target>
 </Project>

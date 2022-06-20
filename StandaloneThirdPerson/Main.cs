@@ -3,10 +3,7 @@ using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
 using UnityEngine.XR;
-using Main = StandaloneThirdPerson.Main;
 
-[assembly: MelonGame("VRChat", "VRChat")]
-[assembly: MelonInfo(typeof(Main), "StandaloneThirdPerson", "1.3.3", "gompo & ljoonal", "https://github.com/gompoc/VRChatMods/releases/")]
 
 namespace StandaloneThirdPerson
 {
@@ -158,6 +155,7 @@ namespace StandaloneThirdPerson
                     thirdPersonCamera.enabled = true;
                 }
             }
+
 
             if (currentMode != CameraMode.Normal)
             {
